@@ -50,6 +50,6 @@ class LinearSVM(LrClassifier):
         return svm_loss(self.W, X_batch, Y_batch, rg)
 
 class Softmax(LrClassifier):
-    def loss(Self, X_batch, Y_batch, rg):
+    def loss(self, X_batch, Y_batch, rg):
         return softmax_loss(self.W, X_batch, Y_batch, rg)
 
