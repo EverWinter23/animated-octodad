@@ -27,7 +27,7 @@ class LrClassifier:
             loss_hist.append(loss)
 
             # update weights using the gradient and the learning rate
-            self.W += lr * grad
+            self.W += -lr * grad
 
             # every 100 lines output loss
             if verbose and _ % 100 == 0:
