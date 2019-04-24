@@ -30,7 +30,7 @@ class LrClassifier:
             self.W += lr * grad
 
             # every 100 lines output loss
-            if verbose and _ % 100 = 0:
+            if verbose and _ % 100 == 0:
                 print("iteration {}/{}: loss={}".format(_, n_iters, loss))
         
         return loss_hist
