@@ -12,7 +12,7 @@ class KNN:
         dists = self.compute_l2_dists(X)
         return self.predict_labels(dists, k=k)
 
-    def compute_l2_dist(self, X):
+    def compute_l2_dists(self, X):
         n_test = X.shape[0]
         n_train = self.X_train.shape[0]
 
