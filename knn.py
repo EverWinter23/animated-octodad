@@ -17,14 +17,15 @@ class KNN:
         n_train = self.X_train.shape[0]
 
         dists = np.zeros((n_test, n_train))
-            dists = np.sqrt(-2 * np.dot(X, self.X_train.T) + np.sum(X**2, axis=1, 
-                    keepdims=True) + np.sum(self.X_train**2, axis=1))
+        dists = np.sqrt(-2 * np.dot(X, self.X_train.T)
+                        + np.sum(X**2, axis=1, keepdims=True)
+                        + np.sum(self.X_train**2, axis=1))
         
         return dists
 
     def predict_labels(self,  dists, k=1):
         n_test = dists.shape[0]
-        Y_pred = np.zeros(n_test):
+        Y_pred = np.zeros(n_test)
 
         for i in range(n_test):
             k_nearest_idxs = np.argsort(dists[i])[:k]
