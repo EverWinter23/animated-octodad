@@ -11,10 +11,10 @@ def softmax_loss(W, X, Y, rg):
     sum_f = np.sum(np.exp(f), axis=1, keepdims=True)
     p = np.exp(f) / sum_f
 
-    loss = np.sum(-np.log(p[np.arange(n_train), y]))
+    loss = np.sum(-np.log(p[np.arange(n_train), Y]))
 
     idx = np.zeros(p.shape)
-    idx[np.arange(n_train), y] = 1
+    idx[np.arange(n_train), Y] = 1
     dW = X.T.dot(p - idx)
 
     loss /= n_train
