@@ -4,7 +4,7 @@ import os
 import numpy as np
 
 def load_pickle(f):
-    return load_pickle.load(f, encoding='bytes')
+    return pickle.load(f, encoding='bytes')
 
 def load_dataset_batch(fname):
     with open(fname, 'rb') as f:
