@@ -1,5 +1,6 @@
 
 from six.moves import cPickle as pickle
+import os
 import numpy as np
 
 def load_pickle(f):
