@@ -9,7 +9,7 @@ class KNN:
         self.Y_train = Y
 
     def predict(self, X, k=1):
-        dist = self.compute_l2_dist(X)
+        dists = self.compute_l2_dists(X)
         return self.predict_labels(dists, k=k)
 
     def compute_l2_dist(self, X):
