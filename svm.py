@@ -6,7 +6,7 @@ def svm_loss(W, X, Y, rg):
     dW = np.zeros(W.shape)
     
     s_c = X.dot(W)
-    s_y = s[np.arange(n_train), Y].reshape(n_train, 1)
+    s_y = s_c[np.arange(n_train), Y].reshape(n_train, 1)
     margins = np.maximum(0, s_c - s_y + 1)
     margins[np.arange(n_train), Y] = 0
     loss = np.sum(np.sum(margins, axis=1)) / n_train
