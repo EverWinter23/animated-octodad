@@ -8,9 +8,9 @@ def load_pickle(f):
 
 def load_dataset_batch(fname):
     with open(fname, 'rb') as f:
-        data = load_pickle(f)
-        X = data['data']
-        Y = data['labels']
+        dataset = load_pickle(f)
+        X = dataset['data']
+        Y = dataset['labels']
         X = X.reshape(10000, 3, 32, 32).transpose(0,2,3,1).astype("float")
         Y = np.array(Y)
         return X, Y 
