@@ -23,7 +23,7 @@ def svm_loss(W, X, Y, rg):
 
     # average out weights
     dW /= n_train
-    dW += reg * W
+    dW += rg * W
 
     return loss, dW
 
