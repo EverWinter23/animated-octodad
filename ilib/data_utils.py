@@ -19,7 +19,7 @@ def load_dataset(root):
     X_train = []
     Y_train = []
     for _ in range(1, 6):
-        fname = os.path.join(root, 'data_batch%d' % (_, ))
+        fname = os.path.join(root, 'data_batch_%d' % (_, ))
         X, Y = load_dataset_batch(fname)
         X_train.append(X)
         Y_train.append(Y)
